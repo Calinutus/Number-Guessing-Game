@@ -16,3 +16,9 @@ else
  BEST_GAME=$($PSQL "SELECT MIN(number_of_guesses) FROM games WHERE user_id=$USER_ID")
  echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
 fi
+
+SECRET_NUMBER=$(( RANDOM % 1000 + 1 ))
+GUESS_COUNT=0
+
+echo "Guess the secret number between 1 and 1000:"
+read GUESS
