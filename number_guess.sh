@@ -25,7 +25,7 @@ read GUESS
 
 while [[ $GUESS -ne $SECRET_NUMBER ]]
 do
- if [[ ! $GUESS =~ [0-9]+$ ]]
+ if [[ ! $GUESS =~ ^[0-9]+$ ]]
  then
   echo "That is not an integer, guess again:"
  elif [[  $GUESS  -gt $SECRET_NUMBER ]]
