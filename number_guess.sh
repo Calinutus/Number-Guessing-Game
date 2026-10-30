@@ -42,3 +42,4 @@ GUESS_COUNT=$((GUESS_COUNT + 1))
 
 INSERT_GAME=$($PSQL "INSERT INTO games(user_id, number_of_guesses, secret_number) VALUES($USER_ID, $GUESS_COUNT, $SECRET_NUMBER)")
 echo "You guessed it in $GUESS_COUNT tries. The secret number was $SECRET_NUMBER. Nice job!"
+exit
